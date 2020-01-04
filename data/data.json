@@ -1,0 +1,54 @@
+  {
+    "projects" : [ 
+       {
+           "id":  0,
+            "project_name": "Project 1",
+            "description": "Random Quote Generator",
+            "technologies":["Visual Studio Code","Github" , "JavaScript" , "HTML" ],
+            "live_link": "https://katiershook.github.io/unit1/unit1-project-master/",
+            "github_link": "https://github.com/katiershook/unit1/tree/master/unit1-project-master",
+            "image_urls": ["./static/images/project1.1.png","./static/images/project1.2.png", "./static/images/project1.3.png"
+             ]
+         }, 
+        {
+            "id": 1,
+            "project_name": "  Project 2",
+            "description": "Pagination Links ",
+            "technologies":["Visual Studio Code","Github" , "JavaScript" , "HTML" ],
+            "live_link":"https://katiershook.github.io/unit2/unit%202/#",
+            "github_link":"https://github.com/katiershook/unit2/tree/master/unit%202",
+            "image_urls": ["./static/images/project2.1.png","./static/images/project2.2.png","./static/images/project2.3.png"
+            ]
+        }, 
+        {
+           "id": 2,
+            "project_name":" Project 3 ",
+           " description": "Confrence Form Submission with Regex ",
+            "technologies":["Visual Studio Code","Github" , "JavaScript" ,"JQuery", "HTML" ],
+            "live_link":"https://katiershook.github.io/unit3/unit%203/",
+            "github_link":"https://github.com/katiershook/unit3/tree/master/unit%203",
+            "image_urls": ["./static/images/project3.1.png","./static/images/project3.2.png","./static/images/project3.3.png"]
+        }, 
+        {
+           "id": 3,
+            "project_name":"Project 4",
+            "description":"Phrase Hunter built with Object Oriented JS",
+            "technologies":["Visual Studio Code","Github" , "JavaScript" , "HTML"],
+            "live_link":"https://github.com/katiershook/unit4real",
+            "github_link":"https://github.com/katiershook/unit4real",
+            "image_urls": ["./static/images/project4.1.png","./static/images/project4.2.png","./static/images/project4.3.png"]
+
+        },
+        {
+           "id": 4,
+            "project_name": "Project 5",
+            "description":"Employee Directory with Modal Windows ",
+            "technologies":["Visual Studio Code","Github" , "JavaScript" , "HTML", "Fetch API"],
+            "live_link":"https://katiershook.github.io/project-5-/public_api_request-v1/",
+            "github_link":"https://github.com/katiershook/project-5-/tree/master/public_api_request-v1",
+           "image_urls": ["./static/images/project5.1.png","./static/images/project5.2.png"]
+        }
+
+    ]
+
+}
