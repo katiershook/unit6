@@ -5,6 +5,7 @@ const {data} = require('../data/data.json');
 router.get('/projects', (req, res) => {  
     //const {0} = req.params;
     const {
+        id,
         project_name,   
         description,
         technologies,

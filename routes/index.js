@@ -8,7 +8,7 @@ router.get('/', (req, res) => {
         res.redirect('index');
 });
 
-router.get('/index' ,(req,res) =>{
+router.get('/index' , (req,res) =>{
    
     console.log(projects);
 res.render('index', {projects} )
@@ -17,11 +17,11 @@ res.render('index', {projects} )
 
 router.get('/projects/:id' , function (req, res ,next) {
 
-    const projectId = req.params.id 
+    const projectId = req.params.id; 
     const project = projects.find ( ({ id }) =>  id === +projectId);
 
     if (project){
-        res.render('project')
+        res.render('project', {project});
     } else {
         res.sendStatus(404);
     }
