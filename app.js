@@ -33,6 +33,7 @@ app.use((err,req,res,next)=>{
     res.status(500);
     res.render('error');
     console.log(err);
+    next();
 });
 
 

@@ -8,22 +8,22 @@ block content
       .cell.small-6.medium-9.large-9
 
         
-        h1=  projects.project_name
+        h1=  project
 
    
-        p.lead.text-light
-          p= #{description}
+           p.lead.text-light
+            p= test 
 
       .cell.portfolio-meta.small-6.medium-2.large-3
         h6 Technologies
         ul
-          each technology in technologies
+        //- each technology in technologies
              li= technology
       
-         a.button.expanded(href=`${github_link}`) Live Demo
-         a.button.expanded(href=`${github_link}`) GitHub Repo
+        a.button.expanded(href=`${github_link}`) Live Demo
+        a.button.expanded(href=`${github_link}`) GitHub Repo
     
  
-    img.image(src=`/static/images/${image_urls[1]}`)
-    img.image(src=`/static/images/${image_urls[2]}`)
-    img.image(src=`/static/images/${image_urls[3]}`)
+    img.image(src="")
+    img.image(src="")
+    img.image(src="")
