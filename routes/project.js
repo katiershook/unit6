@@ -1,21 +1,33 @@
 const express = require('express');
 const router = express.Router();
 const {data} = require('../data/data.json');
- console.log(data)
-router.get('/projects', (req, res) => {  
-    //const {0} = req.params;
+//const projectData = data.projects;
+
+router.get('/:id', (req, res) => {  
+    const {id} = req.params;
     const {
-        id,
+  
         project_name,   
         description,
         technologies,
         live_link,
         github_link,
-        images_url,
-    } = data[projects][0]
+        images_urls,
+    } = data[projects][0];
+
+    const projectTemplates = { id,
+    project_name,   
+    description,
+    technologies,
+    live_link,
+    github_link,
+    images_urls,}
+    res.render('project', {data})
 }
     );
-// console.log(project_name);
+
+    
+
 
 
 

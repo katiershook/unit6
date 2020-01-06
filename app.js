@@ -4,6 +4,8 @@ const app = express();
 const router = express.Router();
 const routes = require('./routes');
 const indexRoute = require('./routes/index');
+const about = require('./routes/about');
+const project = require('./routes/project');
 const bodyParser = require('body-parser');
 //const cookieParser = require('cookie-parser');
 app.use(bodyParser.urlencoded({
@@ -11,25 +13,14 @@ app.use(bodyParser.urlencoded({
 }));
 app.set('view engine', 'pug');
 app.use(routes);
+app.use('/about',about);
+app.use('/project', project)
 
 app.use('/', indexRoute);
 
 
 app.use('/static', express.static('public'));
 
-
-const main = require('./routes/index');
-const about = require('./routes/about');
-const project = require('./routes/project');
-app.use('/about',about );
-app.use('/project', project)
- console.log('test');
-app.use((req,res, next) =>{
-const err = new Error('Yikes! Something is not quite right!');
-err.status =404;
-next(err);
-
-});
 app.use((req,res,next)=>{
     const err = new Error('Oh no! There is nothing here');
     err.status = 404;
@@ -37,11 +28,14 @@ app.use((req,res,next)=>{
     next(err);
 });
 
-app.get('/project' ,(req, res)=> {
-	res.render('project', {id})
+app.use((err,req,res,next)=>{
+    res.locals.error = err;
+    res.status(500);
+    res.render('error');
+    console.log(err);
+});
 
-    console.log('test');
-})
+
 app.use('/static', express.static('public'))
 
 

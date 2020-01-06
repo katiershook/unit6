@@ -23,20 +23,20 @@
         {
            "id": 2,
             "project_name":" Project 3 ",
-           " description": "Confrence Form Submission with Regex ",
+            "description": "Form Submission",
             "technologies":["Visual Studio Code","Github" , "JavaScript" ,"JQuery", "HTML" ],
             "live_link":"https://katiershook.github.io/unit3/unit%203/",
             "github_link":"https://github.com/katiershook/unit3/tree/master/unit%203",
-            "image_urls": ["./static/images/project3.1.png","./static/images/project3.2.png","./static/images/project3.3.png"]
+            "image_urls": ["./static/images/project3.3.png","./static/images/project3.1.png","./static/images/project3.2.png","./static/images/project3.3.png"]
         }, 
         {
            "id": 3,
             "project_name":"Project 4",
-            "description":"Phrase Hunter built with Object Oriented JS",
+            "description":"Phrase Hunter ",
             "technologies":["Visual Studio Code","Github" , "JavaScript" , "HTML"],
             "live_link":"https://github.com/katiershook/unit4real",
             "github_link":"https://github.com/katiershook/unit4real",
-            "image_urls": ["./static/images/project4.1.png","./static/images/project4.2.png","./static/images/project4.3.png"]
+            "image_urls": ["/static/images/project4.3.png","./static/images/project4.1.png","./static/images/project4.2.png","./static/images/project4.3.png"]
 
         },
         {
