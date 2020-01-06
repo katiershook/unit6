@@ -9,12 +9,12 @@ const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({
 	extended: false
 }));
- 
+app.set('view engine', 'pug');
 app.use(routes);
 
 app.use('/', indexRoute);
 app.use('/static', express.static('public'));
-app.set('view engine', 'pug');
+
 
 const main = require('./routes/index');
 const about = require('./routes/about');
@@ -33,11 +33,12 @@ const project = require('./routes/project');
 
 // });
 
-
-app.get('/about' ,(req, res)=> {
+app.get('/project' ,(req, res)=> {
+	res.render('project', {id})
 
     console.log('test');
 })
+app.use('/static', express.static('public'))
 
 app.listen(3000, () => {
 	console.log("up and running on local host 3000")

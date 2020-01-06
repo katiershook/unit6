@@ -8,7 +8,7 @@
             "live_link": "https://katiershook.github.io/unit1/unit1-project-master/",
             "github_link": "https://github.com/katiershook/unit1/tree/master/unit1-project-master",
             "image_urls": ["./static/images/project1.1.png","./static/images/project1.2.png", "./static/images/project1.3.png"
-             ]
+            ]     
          }, 
         {
             "id": 1,
