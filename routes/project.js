@@ -1,11 +1,15 @@
+
+
 const express = require('express');
 const router = express.Router();
+
 const {data} = require('../data/data.json');
-//const projectData = data.projects;
+const {projects} = data.projects;
+
 
 router.get('/:id', (req, res) => {  
-    const id = req.params;
-    const projectPage = project[id].project_name;
+    const {id} = req.params;
+
    
     const {
   
@@ -15,7 +19,7 @@ router.get('/:id', (req, res) => {
         live_link,
         github_link,
         images_urls,
-    } = data[projectPage]
+    } = projects[id];
 
     const projectTemplates = { id,
     project_name,   
@@ -23,8 +27,8 @@ router.get('/:id', (req, res) => {
     technologies,
     live_link,
     github_link,
-    images_urls,}
-    res.render('project', {projectTemplates})
+    images_urls,};
+    res.render('projects', {projectTemplates})
 }
     );
 

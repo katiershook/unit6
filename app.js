@@ -14,7 +14,7 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'pug');
 app.use(routes);
 app.use('/about',about);
-app.use('/project', project)
+app.use('/projects', project)
 
 app.use('/', indexRoute);
 
