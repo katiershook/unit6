@@ -13,24 +13,28 @@ app.set('view engine', 'pug');
 app.use(routes);
 
 app.use('/', indexRoute);
+
+
 app.use('/static', express.static('public'));
 
 
 const main = require('./routes/index');
 const about = require('./routes/about');
 const project = require('./routes/project');
+app.use('/about',about );
+app.use('/project', project)
  console.log('test');
 app.use((req,res, next) =>{
-const err = new Error('not found');
+const err = new Error('Yikes! Something is not quite right!');
 err.status =404;
 next(err);
 
 });
-app.use((err, req, res, next )  => { 
-    res.locals.error = err; 
-    res.status(err.status);
-    res.render('error',err);
-
+app.use((req,res,next)=>{
+    const err = new Error('Oh no! There is nothing here');
+    err.status = 404;
+    console.log(err);
+    next(err);
 });
 
 app.get('/project' ,(req, res)=> {
@@ -39,6 +43,8 @@ app.get('/project' ,(req, res)=> {
     console.log('test');
 })
 app.use('/static', express.static('public'))
+
+
 
 app.listen(3000, () => {
 	console.log("up and running on local host 3000")
