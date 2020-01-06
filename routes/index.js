@@ -1,32 +1,14 @@
 const express = require('express');
 const router = express.Router();
-const  {data}  = require('../data/data.json');
-const projects = {data};
-
+const  data  = require('../data/data.json');
 // get the "home" page 
 router.get('/', (req, res) => {
         res.redirect('index');
 });
-
 router.get('/index' , (req,res) =>{
-   
-    console.log(projects);
-res.render('index', {projects} )
-
+    console.log(data.projects[0]);
+res.render('index', {data} )
 });
-
-router.get('/projects/:id' , function (req, res ,next) {
-
-    const projectId = req.params.id; 
-    const project = projects.find ( ({ id }) =>  id === +projectId);
-
-    if (project){
-        res.render('project', {project});
-    } else {
-        res.sendStatus(404);
-    }
-
-});
-
-
 module.exports = router;
+
+
