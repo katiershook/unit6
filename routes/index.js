@@ -6,7 +6,7 @@ router.get('/', (req, res) => {
         res.redirect('index');
 });
 router.get('/index' , (req,res) =>{
-   
+    console.log(data.projects[0]);
 res.render('index', {data} )
 });
 module.exports = router;

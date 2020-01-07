@@ -12,13 +12,13 @@ block content
 
    
            p.lead.text-light
-            p= test 
+            p= #{description}
 
       .cell.portfolio-meta.small-6.medium-2.large-3
         h6 Technologies
         ul
-        //- each technology in technologies
-             li= technology
+         each technology in technologies
+            li= technology
       
         a.button.expanded(href=`${github_link}`) Live Demo
         a.button.expanded(href=`${github_link}`) GitHub Repo

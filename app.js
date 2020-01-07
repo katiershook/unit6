@@ -1,5 +1,4 @@
-const express = require('express');
-const data = require('./data/data.json')
+const express = require('express')
 const app = express();
 const router = express.Router();
 const routes = require('./routes');
@@ -14,32 +13,12 @@ app.use(bodyParser.urlencoded({
 app.set('view engine', 'pug');
 app.use(routes);
 app.use('/about',about);
-app.use('/projects', project)
+app.use('/project', project)
 
 app.use('/', indexRoute);
 
 
 app.use('/static', express.static('public'));
-
-app.use((req,res,next)=>{
-    const err = new Error('Oh no! There is nothing here');
-    err.status = 404;
-    console.log(err);
-    next(err);
-});
-
-app.use((err,req,res,next)=>{
-    res.locals.error = err;
-    res.status(500);
-    res.render('error');
-    console.log(err);
-    next();
-});
-
-
-app.use('/static', express.static('public'))
-
-
 
 app.listen(3000, () => {
 	console.log("up and running on local host 3000")
