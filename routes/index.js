@@ -1,3 +1,4 @@
+// requires express 
 const express = require('express');
 const router = express.Router();
 const  data  = require('../data/data.json');
@@ -6,9 +7,11 @@ router.get('/', (req, res) => {
         res.redirect('index');
 });
 router.get('/index' , (req,res) =>{
-    console.log(data.projects[0]);
-res.render('index', {data} )
+
+    // {data} to access json data.
+res.render('index', {data})
 });
+//exports the files 
 module.exports = router;
 
 
