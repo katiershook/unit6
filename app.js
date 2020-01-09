@@ -29,7 +29,7 @@ next(err);
 });
 app.use((err, req, res, next )  => { 
     res.locals.error = err; 
-    res.status(err.status);
+    res.status(err.status || 500);
     res.render('error',err);
 
 });
