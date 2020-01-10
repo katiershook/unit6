@@ -18,12 +18,12 @@ app.use('/project', project)
 app.use('/', indexRoute);
 
 
-app.use('/static', express.static('public'));
-
+});
 
 app.use((req,res, next) =>{
 const err = new Error(' whoops not found');
 err.status =404;
+console.log(err)
 next(err);
 
 });
