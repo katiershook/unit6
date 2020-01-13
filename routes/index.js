@@ -4,13 +4,10 @@ const router = express.Router();
 const  data  = require('../data/data.json');
 // get the "home" page 
 router.get('/', (req, res) => {
-        //res.redirect('index');
+    res.render('index', {data})
 });
-router.get('/index' , (req,res) =>{
 
-    // {data} to access json data.
-res.render('index', {data})
-});
+
 //exports the files 
 module.exports = router;
 
