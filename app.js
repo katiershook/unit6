@@ -18,7 +18,7 @@ app.use('/project', project)
 app.use('/', indexRoute);
 
 
-});
+
 
 app.use((req,res, next) =>{
 const err = new Error(' whoops not found');
